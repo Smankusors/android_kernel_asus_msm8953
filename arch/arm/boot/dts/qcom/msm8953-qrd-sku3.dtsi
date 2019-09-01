@@ -109,7 +109,7 @@
 };
 
 &ext_codec {
-	status = "ok";
+	status = "disabled";
 	qcom,model = "msm8953-sku3-tasha-snd-card";
 
 	qcom,audio-routing =
