@@ -67,7 +67,7 @@
 
 &ext_codec {
 	qcom,model = "msm8953-sku3-tasha-snd-card";
-	status = "okay";
+	status = "disabled";
 
 	qcom,audio-routing =
 		"AIF4 VI", "MCLK",
