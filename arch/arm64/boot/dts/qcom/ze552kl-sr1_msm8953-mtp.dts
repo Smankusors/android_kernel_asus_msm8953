@@ -17,7 +17,6 @@
 #include "pmi8950.dtsi"
 #include "ze552kl-sr1_msm8953-mtp.dtsi"
 #include "msm8953-pmi8950.dtsi"
-#include "ze552kl-sr1_msm8953-camera-sensor-mtp.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. MSM8953 MTP LIBRA SR1 ";
@@ -33,14 +32,20 @@
 	};
 };
 
-&pmi8950_fg {
+&qpnp_fg {
 	qcom,battery-data = <&mtp_batterydata>;
 };
 
-&pmi8950_charger {
+&pmi_haptic{
+	qcom,lra-auto-res-mode="qwd";
+	qcom,lra-high-z="opt1";
+	qcom,lra-res-cal-period = <0>;
+	qcom,wave-play-rate-us = <4165>;
+};
+
+&qpnp_smbcharger {
 	qcom,battery-data = <&mtp_batterydata>;
 	//qcom,chg-led-sw-controls;    //ASUS_BSP Deeo : remove for LED
 	//qcom,chg-led-support;        //ASUS_BSP Deeo : remove for LED
-	qcom,external-typec;
-	qcom,typec-psy-name = "typec";
+	qcom,usbin-vadc = <&pmi8950_vadc>;
 };
