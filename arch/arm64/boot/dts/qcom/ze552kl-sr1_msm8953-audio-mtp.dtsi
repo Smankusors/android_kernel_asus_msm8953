@@ -77,21 +77,3 @@
 
 	AUDIO_DEBUG = <&tlmm 89 0x00>; /* ASUS_BSP Paul +++ */
 };
-
-&pm8953_diangu_dig {
-	status = "okay";
-};
-
-&pm8953_diangu_analog {
-	status = "okay";
-};
-
-/*
-&wsa881x_i2c_f {
-	status = "okay";
-};
-
-&wsa881x_i2c_45 {
-	status = "okay";
-};
-*/
