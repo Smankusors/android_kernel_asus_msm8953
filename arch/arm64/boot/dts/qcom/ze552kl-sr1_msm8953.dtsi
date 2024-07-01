@@ -177,6 +177,16 @@
 			no-map;
 			reg = <0x0 0xA0000000 0x0 0x00300000>;
 		};
+
+		ramoops@92900000 {
+			compatible = "ramoops";
+			reg = <0x0 0x92900000 0x0 0x00100000>;
+			console-size = <0x00080000>;
+			ftrace-size = <0x00020000>;
+			pmsg-size = <0x00040000>;
+			record-size = <0x00008000>;
+			dump-oops = <0x1>;
+		};
 	};
 
 	aliases {
